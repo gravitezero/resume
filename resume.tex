@@ -1,0 +1,111 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[top=15mm, bottom=15mm, left=15mm, right=15mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{cmbright}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{colortbl}
+
+\newlength{\rigthCol}
+\newlength{\leftCol}
+\newlength{\bottomMarginHeader}
+\newlength{\topMarginSection}
+\newlength{\bottomMarginSection}
+\newlength{\topMarginSubSection}
+\newlength{\bottomMarginSubSection}
+\newlength{\tabVSpace}
+\newlength{\tempLength}
+
+\setlength{\parindent}{0pt}	
+
+\setlength{\tabVSpace}{10pt}
+\setlength{\tempLength}{\linewidth plus -2\tabVSpace}
+\setlength{\rigthCol}{0.3\tempLength}
+\setlength{\leftCol}{0.7\tempLength}
+
+
+\setlength{\bottomMarginHeader}{\baselineskip}
+\setlength{\topMarginSection}{\baselineskip}
+\setlength{\bottomMarginSection}{\baselineskip}
+\setlength{\topMarginSubSection}{\baselineskip}
+\setlength{\bottomMarginSubSection}{\baselineskip}
+
+%\setlength{\rightCol}{0.3\textwidth}
+%\setlength{\leftCol}{0.7\textwidth}
+
+\newcommand{\mycolor}[1]{
+	\textcolor[RGB]{59,134,254}{#1}
+}
+
+\newcommand{\rmp}[1]{
+	\begin{minipage}[t]{5cm}
+		\begin{flushright}
+			#1
+		\end{flushright}
+	\end{minipage}	
+}
+
+\newcommand{\lmp}[1]{
+	\begin{minipage}[t]{13cm}
+		\begin{flushleft}
+			#1
+		\end{flushleft}
+	\end{minipage}
+}
+
+\newcommand{\rltabvline}[2]{
+	\begin{tabular}{ p{5cm} @{\hspace{\tabVSpace}} | @{\hspace{\tabVSpace}} p{16cm} }
+	\rmp{#1} & \lmp{#2}
+	\end{tabular}
+}		
+
+\newcommand{\rltab}[2]{
+	\begin{tabular}{ p{5cm} @{\hspace{2\tabVSpace}} p{16cm} }
+	\rmp{#1} & \lmp{#2}
+	\end{tabular}
+}
+
+\newcommand{\paragraphTitle}[1]{
+		\huge{\mycolor{#1}}
+}
+
+\newcommand{\header}[2]{
+	\rltabvline{#1}{#2}
+	\vspace{\bottomMarginHeader}\\
+}
+
+\renewcommand{\section}[1]{
+	\vspace{\topMarginSection}
+	\rltab{}{\paragraphTitle{#1}}
+	\vspace{\bottomMarginSection}\\
+}
+
+\renewcommand{\subsection}[2]{
+	\rltab{\textbf{#1}}{#2}\\
+}
+\begin{document}
+\pagestyle{empty}
+
+
+
+\header{
+		\mycolor{address} \\		272 \textsc{Cours Lafayette} \\		69003 \textsc{Lyon FRANCE}\\~\\		+33 6 84 88 87 05\\		etienne.brodu@insa-lyon.fr
+	}
+	{
+		\Large{\textsc{Etienne}}\\
+		\Large{\textsc{Brodu}}
+	}
+	
+\section{Education}
+\subsection{2007 - 2012}
+			{Master of Engineering in Computer Sciences National Institute of Applied Sciences (INSA) Lyon, France}\\
+
+
+
+
+\end{document}
