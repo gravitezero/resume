@@ -1,0 +1,105 @@
+\documentclass[a4paper,11.5pt]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[top=15mm, bottom=15mm, left=15mm, right=15mm]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{colortbl}
+
+% ---------------------
+
+\newlength{\rigthCol}
+\newlength{\leftCol}
+
+\newlength{\topMarginHeader}
+\newlength{\bottomMarginHeader}
+
+\newlength{\topMarginSection}
+\newlength{\bottomMarginSection}
+
+\newlength{\topMarginSubSection}
+\newlength{\bottomMarginSubSection}
+
+\newlength{\tabularVSpace}
+
+\newlength{\writingLength}
+
+% ---------------------
+
+\setlength{\parindent}{0pt}
+
+\setlength{\tabularVSpace}{10pt}
+
+\setlength{\writingLength}{\textwidth plus -2\tabularVSpace}
+
+\setlength{\rigthCol}{0.3\writingLength}
+\setlength{\leftCol}{0.7\writingLength}
+
+\setlength{\topMarginHeader}{0pt}
+\setlength{\bottomMarginHeader}{\baselineskip}
+
+\setlength{\topMarginSection}{\baselineskip}
+\setlength{\bottomMarginSection}{\baselineskip}
+
+\setlength{\topMarginSubSection}{\baselineskip}
+\setlength{\bottomMarginSubSection}{\baselineskip}
+
+% ---------------------
+
+\newcommand{\mycolor}[1]{
+	\textcolor[RGB]{59,134,254}{#1}
+}
+
+\newcommand{\rmp}[1]{
+	\begin{minipage}[t]{5cm}
+		\begin{flushright}
+			#1
+		\end{flushright}
+	\end{minipage}	
+}
+
+\newcommand{\lmp}[1]{
+	\begin{minipage}[t]{13cm}
+		\begin{flushleft}
+			#1
+		\end{flushleft}
+	\end{minipage}
+}
+
+\newcommand{\rltabvline}[2]{
+	\begin{tabular}{ p{5cm} @{\hspace{\tabularVSpace}} | @{\hspace{\tabularVSpace}} p{16cm} }
+	\rmp{#1} & \lmp{#2}
+	\end{tabular}
+}		
+
+\newcommand{\rltab}[2]{
+	\begin{tabular}{ p{5cm} @{\hspace{2\tabularVSpace}} p{16cm} }
+	\rmp{#1} & \lmp{#2}
+	\end{tabular}
+}
+
+\newcommand{\paragraphTitle}[1]{
+		\huge{\mycolor{#1}}
+}
+
+\newcommand{\header}[2]{
+	\rltabvline{#1}{#2}
+	\vspace{\bottomMarginHeader}\\
+}
+
+\renewcommand{\section}[1]{
+	\vspace{\topMarginSection}
+	\rltab{}{\paragraphTitle{#1}}
+	\vspace{\bottomMarginSection}\\
+}
+
+\renewcommand{\subsection}[2]{
+	\rltab{\textbf{#1}}{#2}\\
+}
+
+% ---------------------
