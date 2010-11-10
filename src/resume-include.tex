@@ -1,15 +1,13 @@
 \documentclass[a4paper,11.5pt]{article}
 
 \usepackage[latin1]{inputenc}
-\usepackage[top=15mm, bottom=15mm, left=15mm, right=15mm]{geometry}
+\usepackage[top=10mm, bottom=10mm, left=10mm, right=10mm]{geometry}
 
 \usepackage[T1]{fontenc}
 \usepackage[scaled]{helvet}
 \renewcommand*\familydefault{\sfdefault}
 
 \usepackage{xcolor}
-\usepackage{array}
-\usepackage{colortbl}
 
 % ---------------------
 
@@ -25,29 +23,31 @@
 \newlength{\topMarginSubSection}
 \newlength{\bottomMarginSubSection}
 
-\newlength{\tabularVSpace}
+\newlength{\vSpaceMargin}
 
 \newlength{\writingLength}
 
 % ---------------------
 
-\setlength{\parindent}{0pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0cm}
 
-\setlength{\tabularVSpace}{10pt}
+\setlength{\vSpaceMargin}{0.5cm}
 
-\setlength{\writingLength}{\textwidth plus -2\tabularVSpace}
+\setlength{\writingLength}{\textwidth}
+\addtolength{\writingLength}{-2\vSpaceMargin}
 
-\setlength{\rigthCol}{0.3\writingLength}
-\setlength{\leftCol}{0.7\writingLength}
+\setlength{\rigthCol}{0.25\writingLength}
+\setlength{\leftCol}{0.75\writingLength}
 
 \setlength{\topMarginHeader}{0pt}
-\setlength{\bottomMarginHeader}{\baselineskip}
+\setlength{\bottomMarginHeader}{30pt}
 
-\setlength{\topMarginSection}{\baselineskip}
-\setlength{\bottomMarginSection}{\baselineskip}
+\setlength{\topMarginSection}{10pt}
+\setlength{\bottomMarginSection}{0pt}
 
-\setlength{\topMarginSubSection}{\baselineskip}
-\setlength{\bottomMarginSubSection}{\baselineskip}
+\setlength{\topMarginSubSection}{0pt}
+\setlength{\bottomMarginSubSection}{0pt}
 
 % ---------------------
 
@@ -56,7 +56,7 @@
 }
 
 \newcommand{\rmp}[1]{
-	\begin{minipage}[t]{5cm}
+	\begin{minipage}[t]{\rigthCol}
 		\begin{flushright}
 			#1
 		\end{flushright}
@@ -64,7 +64,7 @@
 }
 
 \newcommand{\lmp}[1]{
-	\begin{minipage}[t]{13cm}
+	\begin{minipage}[t]{\leftCol}
 		\begin{flushleft}
 			#1
 		\end{flushleft}
@@ -72,13 +72,13 @@
 }
 
 \newcommand{\rltabvline}[2]{
-	\begin{tabular}{ p{5cm} @{\hspace{\tabularVSpace}} | @{\hspace{\tabularVSpace}} p{16cm} }
+	\begin{tabular}{@{} p{\rigthCol} @{\hspace{\vSpaceMargin}} | @{\hspace{\vSpaceMargin}} p{\leftCol} @{}}
 	\rmp{#1} & \lmp{#2}
 	\end{tabular}
 }		
 
 \newcommand{\rltab}[2]{
-	\begin{tabular}{ p{5cm} @{\hspace{2\tabularVSpace}} p{16cm} }
+	\begin{tabular}{@{} p{\rigthCol} @{\hspace{2\vSpaceMargin}} p{\leftCol} @{}}
 	\rmp{#1} & \lmp{#2}
 	\end{tabular}
 }
