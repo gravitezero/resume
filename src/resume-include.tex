@@ -13,6 +13,7 @@
 
 \newlength{\rigthCol}
 \newlength{\leftCol}
+\newlength{\titleCol}
 
 \newlength{\topMarginHeader}
 \newlength{\bottomMarginHeader}
@@ -39,6 +40,7 @@
 
 \setlength{\rigthCol}{0.25\writingLength}
 \setlength{\leftCol}{0.75\writingLength}
+\setlength{\titleCol}{0.375\writingLength}
 
 \setlength{\topMarginHeader}{0pt}
 \setlength{\bottomMarginHeader}{30pt}
@@ -71,9 +73,17 @@
 	\end{minipage}
 }
 
-\newcommand{\rltabvline}[2]{
-	\begin{tabular}{@{} p{\rigthCol} @{\hspace{\vSpaceMargin}} | @{\hspace{\vSpaceMargin}} p{\leftCol} @{}}
-	\rmp{#1} & \lmp{#2}
+\newcommand{\head}[1]{
+	\begin{minipage}[t]{\titleCol}
+		\begin{flushleft}
+			#1
+		\end{flushleft}
+	\end{minipage}
+}
+
+\newcommand{\rltabvline}[3]{
+	\begin{tabular}{@{} p{\rigthCol} @{\hspace{\vSpaceMargin}} | @{\hspace{\vSpaceMargin}} p{\titleCol} @{} p{\titleCol}}
+	\rmp{#1} & \head{#2} & \head{#3}
 	\end{tabular}
 }		
 
@@ -87,8 +97,8 @@
 		\huge{\mycolor{#1}}
 }
 
-\newcommand{\header}[2]{
-	\rltabvline{#1}{#2}
+\newcommand{\header}[3]{
+	\rltabvline{#1}{\LARGE{#2}}{\LARGE{#3}}
 	\vspace{\bottomMarginHeader}\\
 }
 
