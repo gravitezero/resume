@@ -1,0 +1,67 @@
+		Etienne
+		Brodu
+		
+		Software developer
+		UI/UX Designer
+
+		272 Cours Lafayette 
+		69003 Lyon FRANCE
+		+33 (0) 6 84 88 87 05
+		etienne.brodu@insa-lyon.fr
+	
+	
+	
+	
+//// Education ////////////////////////////////////
+	// 2007 - 2012
+		Master of Engineering in Computer Sciences and Information Technology, National Institute of Applied Sciences (INSA) of Lyon, France
+		
+	// 2004 - 2007
+		Advanced Scientific High School Diploma passed with honors Lyc'ee Jean Moulin, Angers, France. Specialization: Engineering Sciences
+
+//// Work Experiences ////////////////////////////////////
+	// June - August 2010
+		Third year Internship: In the CITI laboratory (INRIA), working on android's virtual machine dalvik to adapt to an OSGi modification. Used Java and C/C++ with JNI.
+
+	// 2009
+		Second year Project: An accurate gravitational model. Language used : OpenGL.
+		
+	// 2008
+		Website for the Insa Ski club. Languages used: Javascript/ HTML/ CSS.
+				
+	// 2006
+		High School Project: Clock using the retinal persistence.
+		 Microcontroller code in C.
+		 Jury presentation.
+		
+//// Special Skills ////////////////////////////////////
+	// Programming languages
+		UML, C, C++, Java, Assembler 68K and x86, Oracle, SQL, PL/SQL, XML, (X)HTML, CSS, LaTeX, Prolog, Starlet, Matlab
+		
+	// Operating systems
+		GNU Linux (Gentoo, Debian-like ...), Mac os X, Microsoft Windows, VxWorks
+		
+	// Networks
+		Network architecture, Internet architecture, ISO architecture, fixed and mobile telecommunications, networks administration and security, Network functions, data links, IP, local Area Networks
+
+	// Design methods
+		MERISE, UML, SART, USDP, ERP
+		
+	// Tools & Library
+		Android, Qt, XCode, Eclipse, NetBeans, Matlab, Rational Softare Architect
+		
+	// Languages
+		French (native),English (fluent),German(Beginner)
+				
+//// Miscellaneous ////////////////////////////////////
+	// Travel
+		In Scandinavia, Germany, England, Ireland, Baltic States, Italia. Many experiences of live in a commune during those travels
+		
+	// Associations activities
+		BdE de l'Insa de Lyon (Student Union), free student-organized festival "24h de l'Insa de Lyon" ...)
+		
+	// Activities
+		Graphic design : Adobe Creative Suite ( Photoshop, Illustrator, InDesign ... ),Camp counselor.
+		
+	// Sport
+		Climbing, snowboarding, running ...
